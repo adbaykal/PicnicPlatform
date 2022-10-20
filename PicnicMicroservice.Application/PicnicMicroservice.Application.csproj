@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <Folder Include="Common\Behaviors\" />
-    <Folder Include="PicnicInvite\Commands\" />
+    <Folder Include="PicnicInvite\Query\" />
   </ItemGroup>
 
   <ItemGroup>

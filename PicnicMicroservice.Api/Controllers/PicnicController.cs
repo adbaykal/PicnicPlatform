@@ -2,6 +2,7 @@
 using PicnicMicroservice.Api.ViewModels;
 using PicnicMicroservice.Application.Picnic.Commands;
 using PicnicMicroservice.Application.Picnic.Queries;
+using PicnicMicroservice.Application.PicnicInvite.Commands;
 using PicnicMicroservice.Domain.Entities;
 
 namespace PicnicMicroservice.Api.Controllers
@@ -72,5 +73,41 @@ namespace PicnicMicroservice.Api.Controllers
                 throw;
             }
         }
+
+        [HttpPost]
+        [Route("{picnicId}/invites")]
+        public async Task<ActionResult> PostPicnicInvite(PostPicnicInviteViewModel invite, CancellationToken cancellationToken)
+        {
+            //We can use validator structure in this but for quick action I didn't add FluentValidations in the app.
+            if (invite == null ||
+                !Guid.TryParse(invite.PicnicId, out Guid parsedPicnicId) ||
+                !Guid.TryParse(invite.MemberId, out Guid parsedMemberId))
+            {
+                throw new BadHttpRequestException("Please send a valid picnic invite object!");
+            }
+
+            try
+            {
+                try
+                {
+                    var createdInvite = await Mediator.Send(new CreatePicnicInviteCommand() { Invite = invite.ToEntity() }, cancellationToken);
+
+                    return Created(Url.Action("GetInvites", new { picnicId = invite.PicnicId }), invite.PicnicId);
+                }
+                catch (KeyNotFoundException nfEx)
+                {
+                    return NotFound();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("An exception occured while listing Brands. Exception: {exception}", ex.Message);
+                throw;
+            }
+        }
+
+
     }
 }

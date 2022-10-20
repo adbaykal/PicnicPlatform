@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using PicnicMicroservice.Domain.Entities;
 
 namespace PicnicMicroservice.Application.Common.Interfaces
 {
@@ -8,9 +7,9 @@ namespace PicnicMicroservice.Application.Common.Interfaces
     {
         DbSet<Domain.Entities.Picnic> Picnics { get; }
 
-        DbSet<PicnicInvite> PicnicInvites { get; }
+        DbSet<Domain.Entities.PicnicInvite> PicnicInvites { get; }
 
-        DbSet<PicnicCollaboration> PicnicCollaborations { get; }
+        DbSet<Domain.Entities.PicnicCollaboration> PicnicCollaborations { get; }
 
         DatabaseFacade Database { get; }
 
