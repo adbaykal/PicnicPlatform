@@ -3,11 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicnicMicroservice.Domain", "PicnicMicroservice.Domain\PicnicMicroservice.Domain.csproj", "{8489DFE9-C045-4EF8-A73A-1D34F7D8FCF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PicnicMicroservice.Domain", "PicnicMicroservice.Domain\PicnicMicroservice.Domain.csproj", "{8489DFE9-C045-4EF8-A73A-1D34F7D8FCF8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7735F11F-A659-40B5-BA18-2451A4C105D9}"
 	ProjectSection(SolutionItems) = preProject
 		Budget.png = Budget.png
+		DatabaseInit.sql = DatabaseInit.sql
 		ERDiagramForPicnic.png = ERDiagramForPicnic.png
 		OverallArchitecture.png = OverallArchitecture.png
 		Planning.md = Planning.md
@@ -15,11 +16,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TechnicalRoadmap.png = TechnicalRoadmap.png
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicnicMicroservice.Application", "PicnicMicroservice.Application\PicnicMicroservice.Application.csproj", "{0C7647A9-A6A2-4D98-8539-54BDAEAF5290}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PicnicMicroservice.Application", "PicnicMicroservice.Application\PicnicMicroservice.Application.csproj", "{0C7647A9-A6A2-4D98-8539-54BDAEAF5290}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicnicMicroservice.Infrastructure", "PicnicMicroservice.Infrastructure\PicnicMicroservice.Infrastructure.csproj", "{E373D598-60D0-4B2B-AA92-24DBAD44EBD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PicnicMicroservice.Infrastructure", "PicnicMicroservice.Infrastructure\PicnicMicroservice.Infrastructure.csproj", "{E373D598-60D0-4B2B-AA92-24DBAD44EBD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicnicMicroservice.Api", "PicnicMicroservice.Api\PicnicMicroservice.Api.csproj", "{7863B2AC-7C24-4A18-82F3-D2BC292FA2AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PicnicMicroservice.Api", "PicnicMicroservice.Api\PicnicMicroservice.Api.csproj", "{7863B2AC-7C24-4A18-82F3-D2BC292FA2AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
