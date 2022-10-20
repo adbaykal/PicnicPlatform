@@ -1,5 +1,6 @@
 ﻿using PicnicMicroservice.Domain.Common;
 using PicnicMicroservice.Domain.Enums;
+using System.Text.Json.Serialization;
 
 namespace PicnicMicroservice.Domain.Entities
 {
@@ -16,6 +17,7 @@ namespace PicnicMicroservice.Domain.Entities
 
         public PicnicType PicnicType { get; set; }
 
+        [JsonIgnore]
         public List<DomainEvent> DomainEvents { get; set; } = new List<DomainEvent>();
     }
 }

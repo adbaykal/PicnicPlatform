@@ -4,15 +4,15 @@ namespace PicnicMicroservice.Api.ViewModels
 {
     public class PostPicnicInviteViewModel
     {
-        public string PicnicId { get; set; }
         public string MemberId { get; set; }
 
-        public PicnicInvite ToEntity()
+        public PicnicInvite ToEntity(string picnicId)
         {
             return new PicnicInvite()
             {
-                MemberId = Guid.Parse(this.MemberId),
-                PicnicId = Guid.Parse(this.PicnicId)
+                PicnicId = Guid.Parse(picnicId),
+                MemberId = Guid.Parse(this.MemberId)
+
             };
         }
     }
